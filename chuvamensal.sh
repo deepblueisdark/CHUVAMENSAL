@@ -1,23 +1,32 @@
 #!/bin/bash 
 
-
-
-
-
-
-
 echo $1 $2 $3 $4 $5 $6 $7
 
 
-anof=`date +"%Y"`
-mesf=`date +"%m"`
-diaf=`date +"%d"`
-
-anoi=`date +"%Y" -d"365 days ago"`
-mesi=`date +"%m" -d"365 days ago"`
-diai=`date +"%d" -d"365 days ago"`
 
 
+
+if test -z $2 ;then 
+
+	 anof=`date +"%Y"`
+ mesf=`date +"%m"`
+ diaf=`date +"%d"`
+
+ anoi=`date +"%Y" -d"365 days ago"`
+ mesi=`date +"%m" -d"365 days ago"`
+ diai=`date +"%d" -d"365 days ago"`
+
+else 
+
+anof=$2
+mesf=$3
+diaf=$4
+
+anoi=$5
+mesi=$6 
+diai=$7
+
+fi 
 
 case $1 in 
 	opera)
